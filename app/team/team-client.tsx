@@ -24,7 +24,7 @@ export default function TeamPageClient({ execs, team }: TeamPageClientProps) {
       <section className="py-32 px-6 md:px-12 max-w-[90rem] mx-auto">
         <div className="mb-24">
             <h2 className="text-[4rem] sm:text-[6rem] lg:text-[8rem] font-bold tracking-tighter leading-[0.9] flex items-start text-[#1a1c1c]">
-              <span className="w-6 h-12 sm:w-8 sm:h-16 bg-[#e2241f] mr-4 sm:mr-8 shrink-0 mt-3 sm:mt-5 block" aria-hidden="true"></span>
+              <span className="w-4 h-8 md:w-8 md:h-16 bg-[#e2241f] mr-4 md:mr-8 shrink-0 mt-2 md:mt-5 block" aria-hidden="true"></span>
               <div className="flex flex-col">
                 <span>Executive</span>
                 <span>Team</span>
@@ -33,7 +33,7 @@ export default function TeamPageClient({ execs, team }: TeamPageClientProps) {
         </div>
 
         {/* Top 4 Executives */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {execs.slice(0, 4).map((member) => (
             <TeamCard key={member.name} name={member.name} role={member.role} image={member.image} alt={member.alt} />
           ))}
@@ -42,7 +42,7 @@ export default function TeamPageClient({ execs, team }: TeamPageClientProps) {
         {/* 5th Executive Centered */}
         <div className="flex justify-center mb-48">
           {execs[4] && (
-            <div className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-13.5px)]">
+            <div className="w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-13.5px)]">
               <TeamCard key={execs[4].name} name={execs[4].name} role={execs[4].role} image={execs[4].image} alt={execs[4].alt} />
             </div>
           )}
@@ -50,7 +50,7 @@ export default function TeamPageClient({ execs, team }: TeamPageClientProps) {
 
         <div className="mb-24">
             <h2 className="text-[4rem] sm:text-[6rem] lg:text-[8rem] font-bold tracking-tighter leading-[0.9] flex items-start text-[#1a1c1c]">
-              <span className="w-6 h-12 sm:w-8 sm:h-16 bg-[#e2241f] mr-4 sm:mr-8 shrink-0 mt-3 sm:mt-5 block" aria-hidden="true"></span>
+              <span className="w-4 h-8 md:w-8 md:h-16 bg-[#e2241f] mr-4 md:mr-8 shrink-0 mt-2 md:mt-5 block" aria-hidden="true"></span>
               <div className="flex flex-col">
                 <span>The</span>
                 <span>Team</span>
@@ -59,7 +59,7 @@ export default function TeamPageClient({ execs, team }: TeamPageClientProps) {
         </div>
 
         {/* Top 4 Team Members */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {team.slice(0, 4).map((member) => (
             <TeamCard key={member.name} name={member.name} role={member.role} image={member.image} alt={member.alt} />
           ))}
@@ -68,7 +68,7 @@ export default function TeamPageClient({ execs, team }: TeamPageClientProps) {
         {/* Remaining 2 Team Members Centered */}
         <div className="flex justify-center gap-6 flex-wrap pb-32">
           {team.slice(4, 6).map((member) => (
-            <div key={member.name} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-13.5px)]">
+            <div key={member.name} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-13.5px)]">
               <TeamCard name={member.name} role={member.role} image={member.image} alt={member.alt} />
             </div>
           ))}
