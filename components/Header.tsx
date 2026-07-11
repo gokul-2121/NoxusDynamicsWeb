@@ -38,10 +38,10 @@ export function Header() {
       </a>
 
       <header
-        className="flex flex-col xl:flex-row justify-between items-start xl:items-center p-6 md:p-8 border-b-4 border-transparent w-full uppercase text-xs md:text-sm tracking-widest font-bold z-50 relative bg-[#f0f0f0] text-[#1a1c1c]"
+        className="flex flex-col lg:flex-row justify-between items-start lg:items-center p-6 md:p-8 border-b-4 border-transparent w-full uppercase text-xs md:text-sm tracking-widest font-bold z-50 relative bg-[#f0f0f0] text-[#1a1c1c]"
         role="banner"
       >
-        <div className="flex justify-between items-center w-full xl:w-auto">
+        <div className="flex justify-between items-center w-full lg:w-auto">
           <Link href="/" className="flex items-center gap-4 group" aria-label="NOXUSDYNAMICS Home">
             <Image
               src="/Logo.png"
@@ -56,7 +56,7 @@ export function Header() {
           </Link>
 
           <button 
-            className="xl:hidden p-2 text-[#1a1c1c] hover:text-[#e2241f] transition-colors" 
+            className="lg:hidden p-2 text-[#1a1c1c] hover:text-[#e2241f] transition-colors" 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-expanded={isMenuOpen}
             aria-label="Toggle menu"
@@ -65,7 +65,7 @@ export function Header() {
           </button>
         </div>
 
-        <div className={`${isMenuOpen ? 'flex' : 'hidden'} xl:flex flex-col xl:flex-row gap-8 xl:gap-16 items-start xl:items-center w-full xl:w-auto mt-8 xl:mt-0`}>
+        <div className={`${isMenuOpen ? 'flex animate-in slide-in-from-top-2 fade-in duration-300' : 'hidden'} lg:flex flex-col lg:flex-row gap-8 lg:gap-16 items-start lg:items-center w-full lg:w-auto mt-8 lg:mt-0`}>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 opacity-70 font-mono text-xs" aria-label="Contact info">
             <time dateTime={new Date().toISOString()}>{time || "00:00:00 GMT"}</time>
             <a href="mailto:hello@noxusdynamics.com" className="hidden sm:inline hover:opacity-100 transition-opacity">
@@ -91,7 +91,7 @@ export function Header() {
             </Link>
           </nav>
 
-          <Link href="/#contact" className="text-[#1a1c1c] flex items-center gap-1 hover:opacity-70 transition-opacity ml-0 xl:ml-auto font-extrabold" aria-label="Get in touch">
+          <Link href="/#contact" className="text-[#1a1c1c] flex items-center gap-1 hover:opacity-70 transition-opacity ml-0 lg:ml-auto font-extrabold" aria-label="Get in touch">
             GET IN TOUCH <ArrowUpRight className="w-5 h-5 stroke-[3] text-[#e2241f]" aria-hidden="true" />
           </Link>
         </div>

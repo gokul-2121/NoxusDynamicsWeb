@@ -18,7 +18,7 @@ export function Footer({ isTeamPage = false }: FooterProps) {
 
   return (
     <footer
-      className="bg-[#1a1c1c] text-white px-6 md:px-12 pt-24 pb-12 flex flex-col xl:flex-row justify-between items-start xl:items-end gap-16 border-t-[16px] border-[#e2241f]"
+      className="bg-[#1a1c1c] text-white px-6 md:px-12 pt-24 pb-12 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-16 border-t-[16px] border-[#e2241f]"
       role="contentinfo"
     >
       <div className="max-w-xl">
@@ -33,7 +33,7 @@ export function Footer({ isTeamPage = false }: FooterProps) {
         </p>
       </div>
 
-      <div className="flex flex-col items-start xl:items-end gap-12 w-full xl:w-auto">
+      <div className="flex flex-col items-start lg:items-end gap-12 w-full lg:w-auto">
         <nav className="flex flex-wrap gap-8 text-xs font-bold font-mono tracking-widest uppercase" aria-label="Footer navigation">
           <button
             onClick={() => scrollTo(isTeamPage ? "services" : "#services")}
@@ -48,7 +48,7 @@ export function Footer({ isTeamPage = false }: FooterProps) {
             Terms of Service
           </button>
         </nav>
-        <p className="text-xs opacity-40 font-mono tracking-widest uppercase mt-4 xl:mt-0" aria-label={`Copyright ${year} NOXUSDYNAMICS`}>
+        <p className="text-xs opacity-40 font-mono tracking-widest uppercase mt-4 lg:mt-0" aria-label={`Copyright ${year} NOXUSDYNAMICS`}>
           © {year} NOXUSDYNAMICS. DATA-DRIVEN AGRITECH SYSTEMS.
         </p>
       </div>
