@@ -37,6 +37,7 @@ async function optimizeImage(inputPath: string, outputDir: string) {
         const outputPath = join(outputDir, `${relativePath}-${width}w.${format}`);
         mkdirSync(dirname(outputPath), { recursive: true });
 
+        // @ts-ignore
         await image
           .clone()
           .resize(width, null, { withoutEnlargement: true })
@@ -48,6 +49,7 @@ async function optimizeImage(inputPath: string, outputDir: string) {
       const outputPath = join(outputDir, `${relativePath}.${format}`);
       mkdirSync(dirname(outputPath), { recursive: true });
 
+      // @ts-ignore
       await image
         .clone()
         [format](options)
