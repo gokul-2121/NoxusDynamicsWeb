@@ -9,7 +9,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "type-check": "tsc --noEmit",
-    "optimize:images": "node scripts/optimize-images.js",
+    "optimize:images": "npx tsx scripts/optimize-images.ts",
     "analyze": "ANALYZE=true next build",
     "test": "jest",
     "test:watch": "jest --watch",
